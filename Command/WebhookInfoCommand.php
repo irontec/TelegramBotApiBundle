@@ -3,6 +3,7 @@
 namespace Borsaco\TelegramBotApiBundle\Command;
 
 use Borsaco\TelegramBotApiBundle\Service\Bot;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -13,6 +14,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Telegram\Bot\Exceptions\TelegramSDKException;
 use TelegramBot\Api\BotApi;
 
+#[AsCommand(name: 'telegram:bot:webhook:info', description: 'Webhook Information')]
 class WebhookInfoCommand extends Command
 {
     /**
